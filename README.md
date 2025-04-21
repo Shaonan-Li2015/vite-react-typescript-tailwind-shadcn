@@ -2,20 +2,13 @@
 
 This is a guide on how to simply set up a new Vite + React + TypeScript project with Tailwind CSS and Shadcn/ui components from scratch, as of 22<sup>nd</sup>April, 2025.<br><br>
 
-<p align="center" style="display: flex; justify-content: center; gap: 20px;">
-  <div style="background-color: white; border-radius: 12px; padding: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-    <img src="./media/ShadCn.png" width="200" />
-  </div>
-  <div style="background-color: white; border-radius: 12px; padding: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-    <img src="./media/React.png" width="200" />
-  </div>
-  <div style="background-color: white; border-radius: 12px; padding: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-    <img src="./media/Tailwind.png" width="200" />
-  </div>
-  <div style="background-color: white; border-radius: 12px; padding: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-    <img src="./media/TS.png" width="200" />
-  </div>
+<p align="center">
+  <img src="./media/ShadCn.png" width="200" style="background-color: white; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
+  <img src="./media/React.png" width="200" style="background-color: white; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
+  <img src="./media/Tailwind.png" width="200" style="background-color: white; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
+  <img src="./media/TS.png" width="200" style="background-color: white; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
 </p>
+
 
 
 
