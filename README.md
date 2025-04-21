@@ -1,6 +1,6 @@
 # ⚡ Vite + React + TypeScript + TailwindCSS + shadcn/ui Setup Guide
 
-This README documents how to simply set up a new Vite + React + TypeScript project with Tailwind CSS and Shadcn/ui components from scratch, as of 22<sup>nd</sup>April, 2025.<br><br>
+This is guide on how to simply set up a new Vite + React + TypeScript project with Tailwind CSS and Shadcn/ui components from scratch, as of 22<sup>nd</sup>April, 2025.<br><br>
 
 <p align="center">
   <span style="display: inline-block; background: white; border-radius: 12px; padding: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin-right: 20px;">
@@ -17,10 +17,10 @@ This README documents how to simply set up a new Vite + React + TypeScript proje
   </span>
 </p>
 
-
-
 ---
+
 <br><br>
+
 ## 🧱 Step 1: Create Project
 
 ```bash
@@ -30,7 +30,9 @@ npm install
 ```
 
 ---
+
 <br><br>
+
 ## 🌀 Step 2: Install TailwindCSS
 
 ```bash
@@ -60,7 +62,9 @@ export default {
 ```
 
 ---
+
 <br><br>
+
 ## 🛠️ Step 3: Configure Files
 
 ### 🔧 Update `tsconfig.json`
@@ -79,7 +83,9 @@ export default {
 ```
 
 ---
+
 <br><br>
+
 ### 🔧 Update `vite.config.json`
 
 ```ts
@@ -98,7 +104,9 @@ export default defineConfig({
 ```
 
 ---
+
 <br><br>
+
 ## 🧩 Step 4: Install shadcn/ui
 
 ```bash
@@ -112,7 +120,9 @@ I usually use the following:
 - **Neutral**
 
 ---
+
 <br><br>
+
 ## 🔘 Step 5: Test a Component
 
 Install the button component:
@@ -166,7 +176,14 @@ npm run dev
 ```
 
 ✅ You should see the button styled with Tailwind and shadcn/ui.
+<br><br>
+
+<p align="center">
+  <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExNWpnaXNudnMxNDZqajNrb3AwZWpmYmdiMWgyZmMxYXJvMzk4NWRrMiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/dnCNI8LEf7K4otcMqS/giphy.gif" />
+</p>
 
 ---
-<br><br>
+
+<p align="center">
 ©️ For future reference only. All steps verified to work as of 22<sup>nd</sup>April, 2025.
+</p>
