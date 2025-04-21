@@ -17,10 +17,10 @@ This README documents how to simply set up a new Vite + React + TypeScript proje
   </span>
 </p>
 
-<br><br>
+
 
 ---
-
+<br><br>
 ## 🧱 Step 1: Create Project
 
 ```bash
@@ -30,7 +30,7 @@ npm install
 ```
 
 ---
-
+<br><br>
 ## 🌀 Step 2: Install TailwindCSS
 
 ```bash
@@ -60,7 +60,7 @@ export default {
 ```
 
 ---
-
+<br><br>
 ## 🛠️ Step 3: Configure Files
 
 ### 🔧 Update `tsconfig.json`
@@ -79,7 +79,7 @@ export default {
 ```
 
 ---
-
+<br><br>
 ### 🔧 Update `vite.config.json`
 
 ```ts
@@ -98,7 +98,7 @@ export default defineConfig({
 ```
 
 ---
-
+<br><br>
 ## 🧩 Step 4: Install shadcn/ui
 
 ```bash
@@ -112,7 +112,7 @@ I usually use the following:
 - **Neutral**
 
 ---
-
+<br><br>
 ## 🔘 Step 5: Test a Component
 
 Install the button component:
@@ -168,5 +168,5 @@ npm run dev
 ✅ You should see the button styled with Tailwind and shadcn/ui.
 
 ---
-
+<br><br>
 ©️ For future reference only. All steps verified to work as of 22<sup>nd</sup>April, 2025.
