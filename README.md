@@ -1,6 +1,6 @@
 # ⚡ Vite + React + TypeScript + TailwindCSS + shadcn/ui Setup Guide
 
-This is guide on how to simply set up a new Vite + React + TypeScript project with Tailwind CSS and Shadcn/ui components from scratch, as of 22<sup>nd</sup>April, 2025.<br><br>
+This is a guide on how to simply set up a new Vite + React + TypeScript project with Tailwind CSS and Shadcn/ui components from scratch, as of 22<sup>nd</sup>April, 2025.<br><br>
 
 <p align="center">
   <span style="display: inline-block; background: white; border-radius: 12px; padding: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin-right: 20px;">
@@ -16,6 +16,7 @@ This is guide on how to simply set up a new Vite + React + TypeScript project wi
     <img src="./media/TS.png" width="200" />
   </span>
 </p>
+
 
 ---
 
