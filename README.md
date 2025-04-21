@@ -2,20 +2,20 @@
 
 This README documents how to simply set up a new Vite + React + TypeScript project with Tailwind CSS and Shadcn/ui components from scratch, as of 22<sup>nd</sup>April, 2025.<br><br>
 
-<div align="center" style="display: flex; justify-content: center; gap: 20px;">
-  <span style="background: white; border-radius: 12px; padding: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+<p align="center">
+  <span style="display: inline-block; background: white; border-radius: 12px; padding: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin-right: 20px;">
     <img src="./media/ShadCn.png" width="200" />
   </span>
-  <span style="background: black; border-radius: 12px; padding: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+  <span style="display: inline-block; background: white; border-radius: 12px; padding: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin-right: 20px;">
     <img src="./media/React.png" width="200" />
   </span>
-    <span style="background: white; border-radius: 12px; padding: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+  <span style="display: inline-block; background: white; border-radius: 12px; padding: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin-right: 20px;">
     <img src="./media/Tailwind.png" width="200" />
   </span>
-  <span style="background: white; border-radius: 12px; padding: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+  <span style="display: inline-block; background: white; border-radius: 12px; padding: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
     <img src="./media/TS.png" width="200" />
   </span>
-</div>
+</p>
 
 <br><br>
 
