@@ -16,7 +16,7 @@
     }
   },
   "forwardPorts": [5173],
-  "postCreateCommand": "npm install && npx shadcn-ui@latest init",
+  "postCreateCommand": "npm install && npm run setup",
   "portsAttributes": {
     "5173": {
       "label": "Vite Dev Server",

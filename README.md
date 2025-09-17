@@ -1,168 +1,61 @@
-# ⚡ Vite + React + TypeScript + TailwindCSS + shadcn/ui Setup Guide
+---
 
-This is a guide on how to simply set up a new Vite + React + TypeScript project with Tailwind CSS and Shadcn/ui components from scratch, as of 22<sup>nd</sup>April, 2025.<br><br>
+## 📦 Vite + React + TypeScript + Tailwind CSS + shadcn-ui Starter
 
-<p align="center">
-  <img src="./media/ShadCn.png" width="200" style="background-color: white; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
-  <img src="./media/React.png" width="200" style="background-color: white; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
-  <img src="./media/Tailwind.png" width="200" style="background-color: white; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
-  <img src="./media/TS.png" width="200" style="background-color: white; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
-</p>
+This project is a fully automated front-end development environment built with:
 
-
-
+- ⚡ [Vite](https://vitejs.dev/) – lightning-fast build tool
+- ⚛️ [React](https://react.dev/) – component-based UI library
+- 🧠 [TypeScript](https://www.typescriptlang.org/) – static typing for scalable code
+- 🎨 [Tailwind CSS v4](https://tailwindcss.com/) – utility-first styling
+- 🧩 [shadcn-ui](https://ui.shadcn.com/) – accessible, customizable UI components
+- 🧰 GitHub Codespaces + Devcontainer – cloud-based development with zero setup
 
 ---
 
-<br><br>
+## 🚀 Getting Started
 
-## 🧱 Step 1: Create Project
+### 1. Clone the Repository
 
 ```bash
-npm create vite@latest my-app -- --template react-ts
-cd my-app
-npm install
+git clone https://github.com/your-username/your-repo-name.git
 ```
+
+### 2. Open in GitHub Codespaces
+
+- Click the green **Code** button → **Codespaces** → **Create codespace on main**
+- The devcontainer will automatically install dependencies and configure the environment
 
 ---
 
-<br><br>
+## 🛠️ Devcontainer Features
 
-## 🌀 Step 2: Install TailwindCSS
+- Node.js 20 environment
+- Preinstalled VS Code extensions:
+  - ESLint
+  - Prettier
+  - Tailwind CSS IntelliSense
+- Auto-runs `npm install` and `npm run setup` on first launch
+- Port 5173 forwarded for Vite dev server preview
+
+---
+
+## 📜 Setup Script (`setup.js`)
+
+This script automates:
+- Creating `tailwind.config.js` and `postcss.config.js` if missing
+- Ensuring `src/index.css` includes Tailwind v4 import
+- Initializing `shadcn-ui` if not already done
+
+Run manually if needed:
 
 ```bash
-npm install -D tailwindcss@^3.4 postcss@^8 autoprefixer@^10
-npx tailwindcss init -p
-```
-
-### 🧾 Update `tailwind.config.js`
-
-```js
-/** @type {import('tailwindcss').Config} */
-export default {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
-};
-```
-
-### 🧵 Update `src/index.css`
-
-```css
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+npm run setup
 ```
 
 ---
 
-<br><br>
-
-## 🛠️ Step 3: Configure Files
-
-### 🔧 Update `tsconfig.json`
-
-```json
-{
-  "compilerOptions": {
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["src/*"]
-    },
-    "jsx": "react-jsx",
-    "esModuleInterop": true
-  }
-}
-```
-
----
-
-<br><br>
-
-### 🔧 Update `vite.config.json`
-
-```ts
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
-import path from "path";
-
-export default defineConfig({
-  plugins: [react()],
-  resolve: {
-    alias: {
-      "@": path.resolve(__dirname, "src"),
-    },
-  },
-});
-```
-
----
-
-<br><br>
-
-## 🧩 Step 4: Install shadcn/ui
-
-```bash
-npm install @radix-ui/react-slot class-variance-authority clsx tailwind-variants
-npx shadcn@latest init
-```
-
-I usually use the following:
-
-- **New York** (Reccomended)
-- **Neutral**
-
----
-
-<br><br>
-
-## 🔘 Step 5: Test a Component
-
-Install the button component:
-
-```bash
-npx shadcn@latest add button
-```
-
-_Note_: We use --force flag for now.
-
-Update `src/App.tsx` to test the button:
-
-```tsx
-import { useState } from "react";
-import { Button } from "@/components/ui/button";
-
-function App() {
-  const [count, setCount] = useState(0);
-
-  return (
-    <div className="p-4 bg-gray-100 min-h-screen flex flex-col items-center justify-center">
-      <h1 className="text-2xl font-bold mb-4">
-        Vite + React + TypeScript project with Tailwind CSS and Shadcn/ui
-        components
-      </h1>
-      <Button onClick={() => setCount(count + 1)}>Count is {count}</Button>
-
-      <p className="mt-12 text-sm font-thin text-gray-700">
-        If you liked this resource, give it a star on{" "}
-        <a
-          href="https://github.com/Lightxxo/vite-react-typescript-tailwind-shadcn-template"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-blue-500 underline"
-        >
-          GitHub
-        </a>
-        !
-      </p>
-    </div>
-  );
-}
-
-export default App;
-```
+## 🧪 Development
 
 Start the dev server:
 
@@ -170,15 +63,33 @@ Start the dev server:
 npm run dev
 ```
 
-✅ You should see the button styled with Tailwind and shadcn/ui.
-<br><br>
-
-<p align="center">
-  <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExNWpnaXNudnMxNDZqajNrb3AwZWpmYmdiMWgyZmMxYXJvMzk4NWRrMiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/dnCNI8LEf7K4otcMqS/giphy.gif" />
-</p>
+Preview will open automatically in Codespaces.
 
 ---
 
-<p align="center">
-©️ For future reference only. All steps verified to work as of 22<sup>nd</sup>April, 2025.
-</p>
+## 📁 Project Structure
+
+```
+src/
+├── App.tsx
+├── main.tsx
+├── index.css
+tailwind.config.js
+postcss.config.js
+vite.config.ts
+setup.js
+.devcontainer/
+└── devcontainer.json
+```
+
+---
+
+## ✅ Next Steps
+
+- Add your first shadcn-ui component: `npx shadcn-ui add button`
+- Customize Tailwind theme in `tailwind.config.js`
+- Deploy to [Vercel](https://vercel.com/) or [Netlify](https://www.netlify.com/)
+
+---
+
+Let me know if you'd like to personalize this further or add badges, screenshots, or deployment instructions. You're building something seriously solid here.
