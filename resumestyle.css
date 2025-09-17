@@ -1,3 +1,4 @@
+/* Base styles */
 body {
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
@@ -5,40 +6,59 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* Light theme */
 body.light {
   background-color: #f9f9f9;
   color: #333;
 }
 
+/* Dark theme */
 body.dark {
   background-color: #1e1e1e;
   color: #eee;
 }
 
-.layout {
+/* Layout wrapper */
+.wrapper {
   display: flex;
-  min-height: 100vh;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  padding: 40px;
+  gap: 20px;
 }
 
-.sidebar {
-  width: 250px;
-  padding: 20px;
-  background-color: #f0f0f0;
-  transition: background-color 0.3s ease;
+/* Main resume container */
+.container {
+  flex: 1;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
 }
 
-body.dark .sidebar {
+body.dark .container {
   background-color: #2c2c2c;
 }
 
-.sidebar h2 {
-  margin-top: 0;
-  color: #4f46e5;
+/* Sidebar styles */
+.sidebar {
+  width: 200px;
+  flex-shrink: 0;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  height: fit-content;
 }
 
+body.dark .sidebar {
+  background-color: #3a3a3a;
+}
+
+/* Sidebar button */
 .sidebar button {
   display: block;
-  margin-top: 15px;
   padding: 10px;
   width: 100%;
   border: none;
@@ -46,13 +66,22 @@ body.dark .sidebar {
   color: white;
   border-radius: 5px;
   cursor: pointer;
+  font-size: 1em;
 }
 
-.content {
-  flex: 1;
-  padding: 30px;
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 30px;
 }
 
+header h1 {
+  margin: 0;
+  font-size: 2em;
+  color: #4f46e5;
+}
+
+/* Sections */
 section {
   margin-bottom: 25px;
 }
@@ -66,9 +95,37 @@ ul {
   padding-left: 20px;
 }
 
+/* Footer */
 footer {
   text-align: center;
   font-size: 0.9em;
   color: #777;
   margin-top: 40px;
+}
+
+footer button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  border: none;
+  background-color: #4f46e5;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .wrapper {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .sidebar {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .container {
+    width: 100%;
+  }
 }
