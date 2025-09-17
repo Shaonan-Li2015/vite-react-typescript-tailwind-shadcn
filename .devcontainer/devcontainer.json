@@ -16,7 +16,7 @@
     }
   },
   "forwardPorts": [5173],
-  "postCreateCommand": "npm install && npm run setup",
+  "postCreateCommand": "npm install && npm run setup && npm install -g http-server",
   "portsAttributes": {
     "5173": {
       "label": "Vite Dev Server",
