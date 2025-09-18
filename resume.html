@@ -25,11 +25,20 @@
 
       <section class="skills">
         <h2>🛠️ Skill Sets</h2>
-        <ul>
-          <li>Languages: HTML, CSS, JavaScript, TypeScript</li>
-          <li>Frameworks: React, Vue, Tailwind CSS</li>
-          <li>Tools: Git, VS Code, Figma</li>
-        </ul>
+        <div class="skill-columns">
+          <ul>
+            <li>Languages: HTML, CSS, JavaScript, TypeScript</li>
+            <li>Backend: Node.js, Express</li>
+          </ul>
+          <ul>
+            <li>Frameworks: React, Vue, Tailwind CSS</li>
+            <li>Libraries: Axios, Redux</li>
+          </ul>
+          <ul>
+            <li>Tools: Git, VS Code, Figma</li>
+            <li>Design: Adobe XD, Sketch</li>
+          </ul>
+        </div>
       </section>
 
       <section class="intro">
@@ -38,6 +47,14 @@
           I'm a passionate front-end developer with a love for clean design and intuitive user experiences.
           I enjoy turning complex problems into elegant solutions and constantly learning new technologies.
         </p>
+      </section>
+
+      <section class="projects">
+        <h2>🧪 Projects</h2>
+        <ul>
+          <li><strong>Portfolio Website</strong> – Built with HTML, CSS, and JavaScript</li>
+          <li><strong>Weather App</strong> – Uses OpenWeather API and async JS</li>
+        </ul>
       </section>
 
       <section class="experience">
@@ -61,21 +78,20 @@
   </main>
 
   <!-- JavaScript for interactivity -->
-    <script>
+  <script>
     document.addEventListener("DOMContentLoaded", () => {
-        const toggleBtn = document.getElementById("toggleTheme")
-        const downloadBtn = document.getElementById("downloadBtn")
+      const toggleBtn = document.getElementById("toggleTheme");
+      const downloadBtn = document.getElementById("downloadBtn");
 
-        toggleBtn.addEventListener("click", () => {
-        document.body.classList.toggle("dark")
-        document.body.classList.toggle("light")
-        })
+      toggleBtn.addEventListener("click", () => {
+        document.body.classList.toggle("dark");
+        document.body.classList.toggle("light");
+      });
 
-        downloadBtn.addEventListener("click", () => {
-        window.print()
-        })
-    })
-    </script>
-
+      downloadBtn.addEventListener("click", () => {
+        window.print();
+      });
+    });
+  </script>
 </body>
 </html>

@@ -21,17 +21,20 @@ body.dark {
 /* Layout wrapper */
 .wrapper {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
   width: 100%;
-  padding: 40px;
-  gap: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px 60px;
+  gap: 40px;
 }
 
 /* Main resume container */
 .container {
-  flex: 1;
+  flex-grow: 1;
+  flex-basis: 0;
+  min-width: 0;
   background: white;
   padding: 30px;
   border-radius: 10px;
@@ -44,7 +47,7 @@ body.dark .container {
 
 /* Sidebar styles */
 .sidebar {
-  width: 200px;
+  width: 160px;
   flex-shrink: 0;
   padding: 20px;
   background-color: #f0f0f0;
@@ -59,14 +62,16 @@ body.dark .sidebar {
 /* Sidebar button */
 .sidebar button {
   display: block;
+  width: 140px;
+  margin: 0 auto;
   padding: 10px;
-  width: 100%;
   border: none;
   background-color: #4f46e5;
   color: white;
   border-radius: 5px;
   cursor: pointer;
   font-size: 1em;
+  text-align: center;
 }
 
 /* Header */
@@ -113,6 +118,83 @@ footer button {
   cursor: pointer;
 }
 
+/* Projects section */
+.projects {
+  background-color: #e0f7fa;
+  padding: 20px;
+  border-left: 5px solid #4f46e5;
+  border-radius: 8px;
+}
+
+.projects h2 {
+  color: #00796b;
+}
+
+/* Experience section */
+.experience {
+  background-color: #fff8e1;
+  padding: 20px;
+  border-left: 5px solid #ff9800;
+  border-radius: 8px;
+}
+
+.experience h2 {
+  color: #e65100;
+}
+
+/* Skills section with Flexbox */
+.skill-columns {
+  display: flex;
+  gap: 30px;
+  margin-top: 15px;
+}
+
+.skill-columns ul {
+  flex: 1;
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+/* Hover effect for buttons */
+button:hover {
+  background-color: #3730a3;
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Dark theme overrides for Projects */
+body.dark .projects {
+  background-color: #263238;
+}
+
+body.dark .projects h2,
+body.dark .projects li,
+body.dark .projects strong {
+  color: #e0f7fa;
+}
+
+/* Dark theme overrides for Experience */
+body.dark .experience {
+  background-color: #3e2723;
+}
+
+body.dark .experience h2,
+body.dark .experience li,
+body.dark .experience strong {
+  color: #ffe0b2;
+}
+
+/* Dark theme button styles */
+body.dark button {
+  background-color: #6366f1;
+  color: white;
+}
+
+body.dark button:hover {
+  background-color: #4338ca;
+}
+
 /* Responsive layout */
 @media (max-width: 768px) {
   .wrapper {
@@ -126,6 +208,14 @@ footer button {
   }
 
   .container {
+    width: 100%;
+  }
+
+  .skill-columns {
+    flex-direction: column;
+  }
+
+  .sidebar button {
     width: 100%;
   }
 }
