@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resume Profile</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.2/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="light dark:bg-gray-900 dark:text-gray-100">
+  <main class="flex flex-col md:flex-row max-w-screen-xl mx-auto p-6 gap-6">
+    
+    <!-- Main Resume Content -->
+    <section class="flex-1 bg-white dark:bg-gray-800 p-8 rounded-lg shadow-md">
+      <header class="text-center mb-8">
+        <h1 class="text-3xl font-bold text-indigo-600 dark:text-indigo-400">Jane Doe</h1>
+        <p class="mt-2 text-sm text-gray-600 dark:text-gray-300">
+          Email: jane@example.com | Phone: +86 138-0000-0000 | Shenzhen, China
+        </p>
+      </header>
+
+      <section class="mb-6">
+        <h2 class="text-xl font-semibold text-indigo-600 dark:text-yellow-300 mb-2">🎓 Education Background</h2>
+        <ul class="list-disc pl-5">
+          <li>B.Sc. in Computer Science – Tsinghua University (2018–2022)</li>
+          <li>Exchange Program – Stanford University (2021)</li>
+        </ul>
+      </section>
+
+      <section class="mb-6">
+        <h2 class="text-xl font-semibold text-indigo-600 dark:text-yellow-300 mb-2">🛠️ Skill Sets</h2>
+        <div class="flex flex-wrap gap-6 mt-4">
+          <ul class="flex-1 min-w-[250px] list-disc pl-5">
+            <li>Languages: HTML, CSS, JavaScript, TypeScript</li>
+            <li>Backend: Node.js, Express</li>
+          </ul>
+          <ul class="flex-1 min-w-[250px] list-disc pl-5">
+            <li>Frameworks: React, Vue, Tailwind CSS</li>
+            <li>Libraries: Axios, Redux</li>
+          </ul>
+          <ul class="flex-1 min-w-[250px] list-disc pl-5">
+            <li>Tools: Git, VS Code, Figma</li>
+            <li>Design: Adobe XD, Sketch</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="mb-6">
+        <h2 class="text-xl font-semibold text-indigo-600 dark:text-yellow-300 mb-2">👋 Self Introduction</h2>
+        <p>
+          I'm a passionate front-end developer with a love for clean design and intuitive user experiences.
+          I enjoy turning complex problems into elegant solutions and constantly learning new technologies.
+        </p>
+      </section>
+
+      <section class="bg-cyan-100 dark:bg-slate-800 p-6 border-l-4 border-indigo-600 rounded-md mb-6">
+        <h2 class="text-teal-700 dark:text-cyan-300 text-xl font-semibold mb-4">🧪 Projects</h2>
+        <ul class="list-disc pl-5">
+          <li><strong>Portfolio Website</strong> – Built with HTML, CSS, and JavaScript</li>
+          <li><strong>Weather App</strong> – Uses OpenWeather API and async JS</li>
+        </ul>
+      </section>
+
+      <section class="bg-yellow-100 dark:bg-orange-900 p-6 border-l-4 border-orange-500 rounded-md mb-6">
+        <h2 class="text-orange-700 dark:text-orange-300 text-xl font-semibold mb-4">💼 Working Experience</h2>
+        <ul class="list-disc pl-5">
+          <li><strong>Frontend Developer</strong> – ByteDance (2023–Present)</li>
+          <li><strong>Intern</strong> – Tencent Cloud UI Team (2022)</li>
+        </ul>
+      </section>
+
+      <footer class="text-center text-sm text-gray-500 dark:text-gray-400 mt-10">
+        <p>© 2025 Jane Doe. All rights reserved.</p>
+        <button id="toggleTheme" class="mt-4 px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-800 transition">
+          🌓 Toggle Theme
+        </button>
+      </footer>
+    </section>
+
+    <!-- Sidebar -->
+    <aside class="w-full md:w-48 bg-gray-100 dark:bg-gray-700 p-4 rounded-lg h-fit">
+      <button id="downloadBtn" class="w-full bg-indigo-600 text-white py-2 px-4 rounded hover:bg-indigo-800 transition">
+        📄 Download PDF
+      </button>
+    </aside>
+  </main>
+
+  <!-- JavaScript for interactivity -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const toggleBtn = document.getElementById("toggleTheme");
+      const downloadBtn = document.getElementById("downloadBtn");
+
+      toggleBtn.addEventListener("click", () => {
+        document.body.classList.toggle("dark");
+        document.body.classList.toggle("light");
+      });
+
+      downloadBtn.addEventListener("click", () => {
+        window.print();
+      });
+    });
+  </script>
+</body>
+</html>

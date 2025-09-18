@@ -143,17 +143,20 @@ footer button {
 }
 
 /* Skills section with Flexbox */
+
 .skill-columns {
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
   margin-top: 15px;
 }
 
 .skill-columns ul {
-  flex: 1;
+  flex: 1 1 300px;
   padding-left: 20px;
   list-style-type: disc;
 }
+
 
 /* Hover effect for buttons */
 button:hover {
