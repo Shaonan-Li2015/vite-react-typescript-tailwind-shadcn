@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tailwind Card Demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.2/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 p-6">
+
+  <div class="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl hover:bg-gray-200">
+    <div class="md:flex">
+      <div class="md:shrink-0">
+        <img class="h-48 w-full object-cover md:h-full md:w-48" src="https://via.placeholder.com/150" alt="Sample image">
+      </div>
+      <div class="p-8">
+        <div class="uppercase tracking-wide text-sm text-pink-600 font-semibold">Tailwind Demo</div>
+        <h1 class="block mt-1 text-lg leading-tight font-medium text-blue-500">Responsive Card</h1>
+        <p class="mt-2 text-gray-500">This card layout adapts to screen size and uses Tailwind’s default utility classes.</p>
+
+        <button class="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700 transition duration-300">
+            Click Me
+        </button>
+
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

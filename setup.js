@@ -4,14 +4,14 @@ import { execSync } from 'child_process'
 
 console.log('🔧 Running setup.js...')
 
-// 1. Create tailwind.config.js if missing
-if (!existsSync('tailwind.config.js')) {
-  console.log('📦 Creating tailwind.config.js...')
+// 1. Create tailwind.config.cjs if missing (CommonJS for projects with "type": "module")
+if (!existsSync('tailwind.config.cjs')) {
+  console.log('📦 Creating tailwind.config.cjs...')
   writeFileSync(
-    'tailwind.config.js',
+    'tailwind.config.cjs',
     `/** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  content: ["./index.html", "./public/index.html", "./src/**/*.{js,ts,jsx,tsx,html}"],
   theme: {
     extend: {},
   },
@@ -21,12 +21,12 @@ module.exports = {
   )
 }
 
-// 2. Create postcss.config.js if missing
-if (!existsSync('postcss.config.js')) {
-  console.log('📦 Creating postcss.config.js...')
+// 2. Create postcss.config.cjs if missing (CommonJS)
+if (!existsSync('postcss.config.cjs')) {
+  console.log('📦 Creating postcss.config.cjs...')
   writeFileSync(
-    'postcss.config.js',
-    `export default {
+    'postcss.config.cjs',
+    `module.exports = {
   plugins: {
     tailwindcss: {},
     autoprefixer: {},
@@ -40,9 +40,9 @@ if (!existsSync('postcss.config.js')) {
 const cssPath = 'src/index.css'
 if (existsSync(cssPath)) {
   const cssContent = readFileSync(cssPath, 'utf-8')
-  if (!cssContent.includes('@import "tailwindcss";')) {
-    console.log('🎨 Updating src/index.css...')
-    writeFileSync(cssPath, '@import "tailwindcss";\n')
+  if (!cssContent.includes('@import "tailwindcss/preflight"')) {
+    console.log('🎨 Updating src/index.css for Tailwind v4...')
+    writeFileSync(cssPath, '@import "tailwindcss/preflight";\n@import "tailwindcss/utilities";\n')
   }
 }
 
