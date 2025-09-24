@@ -92,4 +92,9 @@ setup.js
 
 ---
 
+https://auth.openai.com/oauth/authorize?response_type=code&client_id=app_EMoamEEZ73f0CkXaXp7hrann&redirect_uri=http%3A%2F%2Flocalhost%3
+A1455%2Fauth%2Fcallback&scope=openid%20profile%20email%20offline_access&code_challenge=4eYSXlG2OdTdEwqTHnYBXdaN3dhgKjeAxShFxaqM-vo&code
+_challenge_method=S256&id_token_add_organizations=true&codex_cli_simplified_flow=true&state=-VsT1gUU_aJikelSpcB1Eq2NnritaHhXy2dXFLajABs
+&originator=codex_cli_rs
+
 Let me know if you'd like to personalize this further or add badges, screenshots, or deployment instructions. You're building something seriously solid here.
